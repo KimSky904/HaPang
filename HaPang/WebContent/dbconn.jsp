@@ -3,7 +3,7 @@
 <%
 	Connection conn = null;
 	try{
-		String url = "jdbc:mysql://localhost:3306/marketdb?serverTimezone=Asia/Seoul&useSSL=false";
+		String url = "jdbc:mysql://localhost:3306/hapangdb?serverTimezone=Asia/Seoul&useSSL=false";
 		String user = "root";
 		String password = "mirim";
 		

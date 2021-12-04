@@ -3,7 +3,7 @@
     pageEncoding="UTF-8"%>
 <%
 
-	request.setCharacterEncoding("utf-8");
+	request.setCharacterEncoding("UTF-8");
 
 	Cookie cartId = new Cookie("Shipping_cartId",URLEncoder.encode(request.getParameter("cartId"), "utf-8"));
 	Cookie name = new Cookie("Shipping_name",URLEncoder.encode(request.getParameter("name"), "utf-8"));

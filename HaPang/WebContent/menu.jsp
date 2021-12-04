@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 
 <nav class="navbar navbar-expand" style="background: white">
 	<div class="container" style="background: white">

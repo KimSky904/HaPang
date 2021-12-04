@@ -22,7 +22,7 @@ String cartId = session.getId();
 		</div>		
 		<div>
 			<ul class="navbar-nav mr-auto" >
-				<img src="img/cartImg.PNG" alt="logo">
+				<img src="img/cartImg.png" alt="logo">
 			</ul>
 		</div>
 	</div>

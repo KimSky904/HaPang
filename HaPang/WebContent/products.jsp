@@ -27,7 +27,10 @@
 				while(rs.next()){
 			%>
 			<div class="col-md-4">
-				<img src="C:/upload/<%=rs.getString("p_fileName")%>" style="width:100%">
+				<%
+					System.out.println(rs.getString("p_fileName"));
+				%>
+				<img src="/img/<%=rs.getString("p_fileName")%>" style="width:100%">
 				<h3><%= rs.getString("p_name")%></h3>
 				<p><%= rs.getString("p_description")%></p>
 				<p><%= rs.getString("p_unitPrice")%>원</p>
