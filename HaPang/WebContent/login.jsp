@@ -9,9 +9,8 @@
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3">로그인</h1>
+	<div class="jumbotron" style="background: white">
+		<div class="container" style="background: white">
 		</div>	
 	</div>
 	

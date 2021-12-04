@@ -15,13 +15,21 @@ String cartId = session.getId();
 </head> <%--메뉴--%>
 
 <body>
-<jsp:include page="menu.jsp"></jsp:include>
+<nav class="navbar navbar-expand" style="background: white">
+	<div class="container" style="background: white">
+		<div class="navbar-header" style="background: white">
+			<a class="navbar-brand" href="./products.jsp"><img src="img/hapangLogo.png" alt="logo"></a>
+		</div>		
+		<div>
+			<ul class="navbar-nav mr-auto" >
+				<img src="img/cartImg.PNG" alt="logo">
+			</ul>
+		</div>
+	</div>
+</nav>
+<hr style="width:90%;height:2px;border:none;background-color:#707070;">
 
-<div class="jumbotron">
-<div class="container">
-<h1 class="display-3">장바구니</h1>
-</div>
-</div>
+	<div style="background: white; height:70px;"></div>
 
 <div class="container">
 <div class="row">

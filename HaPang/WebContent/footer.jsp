@@ -1,5 +1,5 @@
 <footer class="container">
-	<p>&copy; WebMarket</p>
+	<p>&copy; HaPang</p>
 </footer>
 	
 	
