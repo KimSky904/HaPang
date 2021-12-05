@@ -3,5 +3,5 @@
 %>
 <%
 	session.invalidate();
-	response.sendRedirect("addProduct.jsp");
+	response.sendRedirect("managerPage.jsp");
 %>

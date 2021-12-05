@@ -48,7 +48,7 @@
 				<p style="font-size: 12px; display:inline;"> |</p>
 				<p style="font-size: 12px; display:inline; text-decoration:line-through"><%= rs.getInt("p_unitPrice")%>원</p>
 			<!-- 상품판매가 + 배송분류 -->
-				<p style="font-size: 12px; color: red; font-style: bold; text-align: left"><%= rs.getString("p_unitPrice")%>원
+				<p style="font-size: 12px; color: red; font-style: bold;"><%= rs.getString("p_discountedPrice")%>원
 				<%
 					//현재 날짜정보
 					Calendar calendar = Calendar.getInstance();
@@ -95,7 +95,7 @@
 				<p style="font-size: 11px;"><%= arriveInfo%></p>  
 				</a>
 				<p> <a href="./updateProduct.jsp?id=<%=rs.getString("p_id") %>"
-					class="btn btn-success" role="button" style="float:left; margin-left:40px;"> 상품 수정&raquo;</a>
+					class="btn btn-success" role="button" style="float:left; margin-left:70px;"> 상품 수정&raquo;</a>
 				<p> <a href="#" onClick="deleteConfirm('<%=rs.getString("p_id") %>')"
 					class="btn btn-secondary" role="button" style="float:left; margin-left:10px;"> 상품 삭제&raquo;</a>
 			</div>

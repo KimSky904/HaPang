@@ -9,10 +9,7 @@
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
-	<div class="jumbotron" style="background: white">
-		<div class="container" style="background: white">
-		</div>	
-	</div>
+	<div style="height:40px"></div>
 	
 	<div class="container" align="center">
 		<div class="col-md-4 col-md-offset-4">
@@ -45,6 +42,8 @@
 			
 		</div>
 	</div>
+	
+		<hr style="width: 90%; margin-top: 40px">
 	
 	<%@ include file="footer.jsp" %>	
 </body>

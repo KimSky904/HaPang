@@ -13,11 +13,9 @@
 </head>
 <body>
 	<%@ include file="menu.jsp" %>
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3">상품 등록</h1>
-		</div>	
-	</div>	
+	<div style="height:90px"></div>
+	<hr width=80%>
+	<div style="height:40px"></div>
 	<div class="container">
 		<form name="newProduct" action="./processAddProduct.jsp" 
 		class="form-horizontal" method="post" enctype="multipart/form-data">
@@ -90,7 +88,8 @@
 			<div class="form-group row">
 				<label class="col-sm-2">배송 유형</label>
 				<div class="col-sm-3">
-					<input type="text" id="deliveryType" name="deliveryType" class="form-control">
+					<input type="radio" id="deliveryType" name="deliveryType" value="rocket">로켓배송
+					<input type="radio" id="deliveryType" name="deliveryType" value="basic">일반배송
 				</div>
 			</div>
 			<div class="form-group row">
