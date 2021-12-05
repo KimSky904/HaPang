@@ -10,10 +10,17 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 <title>상품 목록</title>
+<script type="text/javascript">
+	function deleteConfirm(id){
+		if(confirm("해당 상품을 삭제합니다!") == true) location.href = "./deleteProduct.jsp?id="+id;
+		else return;
+	}
+</script>
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
 	<div style="height:90px"></div>
+	<p> <a href="./addProduct.jsp" class="btn btn-secondary" role="button" style="margin-left: 110px;"> 상품 추가&raquo;</a>
 	<hr width=80%>
 	<div style="height:40px"></div>
 	<div class="container">
@@ -27,7 +34,7 @@
 				rs = pstmt.executeQuery();
 				while(rs.next()){
 			%>
-			<div class="col-md-4" style="width:70px">
+			<div class="col-md-4" style="width:70px; margin-bottom: 50px;">
 			<a href="./product.jsp?id=<%=rs.getString("p_id")%>" style="color:black; text-decoration : none;">
 			<!-- 이미지 -->
 				<img src="C:/upload/<%=rs.getString("p_fileName")%>" style="width:60%">
@@ -87,6 +94,10 @@
 			<!-- 도착정보 -->
 				<p style="font-size: 11px;"><%= arriveInfo%></p>  
 				</a>
+				<p> <a href="./updateProduct.jsp?id=<%=rs.getString("p_id") %>"
+					class="btn btn-success" role="button" style="float:left; margin-left:70px;"> 상품 수정&raquo;</a>
+				<p> <a href="#" onClick="deleteConfirm('<%=rs.getString("p_id") %>')"
+					class="btn btn-secondary" role="button" style="float:left; margin-left:10px;"> 상품 삭제&raquo;</a>
 			</div>
 			<%
 				}
@@ -97,7 +108,6 @@
 			%>
 		</div>
 		<hr>
-		
 	</div>
 	<jsp:include page="footer.jsp" />	
 </body>

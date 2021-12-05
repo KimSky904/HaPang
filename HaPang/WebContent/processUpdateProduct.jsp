@@ -81,7 +81,7 @@
 	if(pstmt!=null) pstmt.close();
 	if(conn!=null) conn.close();
 	
-	response.sendRedirect("editProduct.jsp?edit=update");
+	response.sendRedirect("managerPage.jsp");
 %>
 
 
