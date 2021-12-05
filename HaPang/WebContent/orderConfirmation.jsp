@@ -60,7 +60,7 @@
 				</tr>
 				<%
 					int sum = 0;
-					ArrayList<Product> cartList = (ArrayList<Product>) session.getAttribute("cartlist");
+					ArrayList<Product> cartList = (ArrayList<Product>) session.getAttribute("cartList");
 					if(cartList == null) cartList = new ArrayList<Product>();
 					for(int i=0;i<cartList.size();i++){
 						//상품 리스트 하나씩 출력

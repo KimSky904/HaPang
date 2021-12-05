@@ -86,7 +86,7 @@
 				%>
 				</p>
 			<!-- 도착정보 -->
-				<p style="font-size: 11px;"><%= arriveInfo%></p>  
+				<p style="font-size: 15px; color: #78AC6F"><%= arriveInfo%></p>  
 				</a>
 			</div>
 			<%

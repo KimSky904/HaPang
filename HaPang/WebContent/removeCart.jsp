@@ -27,5 +27,5 @@ System.out.println(1);
 			}
 		}
 		
-		//response.sendRedirect("cart.jsp");
+		response.sendRedirect("cart.jsp");
 %>
