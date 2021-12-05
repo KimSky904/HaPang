@@ -20,7 +20,7 @@
 <body>
 	<jsp:include page="menu.jsp" />
 	<div style="height:90px"></div>
-	<p> <a href="./addProduct.jsp" class="btn btn-secondary" role="button" style="margin-left: 110px;"> 상품 추가&raquo;</a>
+	<p> <a href="./addProduct.jsp" class="btn btn-secondary" role="button" style="margin-left: 170px;"> 상품 추가&raquo;</a>
 	<hr width=80%>
 	<div style="height:40px"></div>
 	<div class="container">
@@ -95,7 +95,7 @@
 				<p style="font-size: 11px;"><%= arriveInfo%></p>  
 				</a>
 				<p> <a href="./updateProduct.jsp?id=<%=rs.getString("p_id") %>"
-					class="btn btn-success" role="button" style="float:left; margin-left:70px;"> 상품 수정&raquo;</a>
+					class="btn btn-success" role="button" style="float:left; margin-left:40px;"> 상품 수정&raquo;</a>
 				<p> <a href="#" onClick="deleteConfirm('<%=rs.getString("p_id") %>')"
 					class="btn btn-secondary" role="button" style="float:left; margin-left:10px;"> 상품 삭제&raquo;</a>
 			</div>

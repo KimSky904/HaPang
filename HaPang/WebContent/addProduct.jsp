@@ -1,6 +1,6 @@
 <%@page import="dto.Product"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" 
     pageEncoding="UTF-8"%>
 <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session"/>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
 		<form name="newProduct" action="./processAddProduct.jsp" 
 		class="form-horizontal" method="post" enctype="multipart/form-data">
 			<div class="form-group row">
-				<label class="col-sm-2">상품 코드</label>
+				<label class="col-sm-2">상품코드</label>
 				<div class="col-sm-3">
 					<input type="text" id="productId" name="productId" class="form-control">
 				</div>
@@ -34,9 +34,15 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">가격</label>
+				<label class="col-sm-2">상품원가</label>
 				<div class="col-sm-3">
 					<input type="text" id="unitPrice" name="unitPrice" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2">상품할인율</label>
+				<div class="col-sm-3">
+					<input type="text" id="discountRate" name="discountRate" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -79,6 +85,18 @@
 				<label class="col-sm-2">이미지</label>
 				<div class="col-sm-5">
 					<input type="file" name="productImage" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2">배송 유형</label>
+				<div class="col-sm-3">
+					<input type="text" id="deliveryType" name="deliveryType" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2">추가 요금</label>
+				<div class="col-sm-3">
+					<input type="text" id="deliveryFee" name="deliveryFee" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">				

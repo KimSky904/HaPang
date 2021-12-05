@@ -31,11 +31,12 @@
 
 	<%@ include file="dbconn.jsp" %>
 	<%
-		String id = "P0001";
+		String productId = request.getParameter("id");
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM product where p_id=P0001";
+		String sql = "SELECT * FROM product where p_id = ?";
 		pstmt = conn.prepareStatement(sql); //디비로 전송
+		pstmt.setString(1, productId);
 		rs = pstmt.executeQuery();
 	%>
 	<div class="container">

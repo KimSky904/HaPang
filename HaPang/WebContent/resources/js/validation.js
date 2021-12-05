@@ -52,5 +52,5 @@ function CheckAddProduct() {
 		return false;
 	}
 
-	 document.newProduct.submit()
+ 	document.newProduct.submit();
 }
