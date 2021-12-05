@@ -9,9 +9,9 @@
 </head>
 <body>
 	<%@ include file="menu.jsp" %>
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3">해당 상품이 존재하지 않습니다.</h1>
+	<div style="width: 100%; height:200px; margin-top: 50px; text-align: center;">
+		<div>
+			<h1 class="display-3" style=" font-size: 30px">해당 상품이 존재하지 않습니다.</h1>
 		</div>	
 	</div>
 	

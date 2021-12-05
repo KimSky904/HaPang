@@ -35,7 +35,7 @@
 				while(rs.next()){
 			%>
 			<div class="col-md-4" style="width:70px; margin-bottom: 50px;">
-			<a href="./product.jsp?id=<%=rs.getString("p_id")%>" style="color:black; text-decoration : none;">
+			<a href="./managerProduct.jsp?id=<%=rs.getString("p_id")%>" style="color:black; text-decoration : none;">
 			<!-- 이미지 -->
 				<img src="C:/upload/<%=rs.getString("p_fileName")%>" style="width:60%">
 				<hr>
@@ -48,7 +48,7 @@
 				<p style="font-size: 12px; display:inline;"> |</p>
 				<p style="font-size: 12px; display:inline; text-decoration:line-through"><%= rs.getInt("p_unitPrice")%>원</p>
 			<!-- 상품판매가 + 배송분류 -->
-				<p style="font-size: 12px; color: red; font-style: bold;"><%= rs.getString("p_discountedPrice")%>원
+				<p style="font-size: 12px; color: red; font-style: 10000; font-weight: bold; color: #9F1F14"><%= rs.getString("p_discountedPrice")%>원
 				<%
 					//현재 날짜정보
 					Calendar calendar = Calendar.getInstance();

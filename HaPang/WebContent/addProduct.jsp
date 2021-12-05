@@ -71,12 +71,8 @@
 			<div class="form-group row">
 				<label class="col-sm-2">상태</label>
 				<div class="col-sm-3">
-					<input type="radio" name="condition" value="New">
-					신규 제품 
-					<input type="radio" name="condition" value="Old">
-					중고 제품 
-					<input type="radio" name="condition" value="Refurbished">
-					재생 제품 
+					<input type="radio" name="condition" value="새상품">새상품
+					<input type="radio" name="condition" value="중고상품">중고상품
 				</div>				
 			</div>		
 			<div class="form-group row">
@@ -88,8 +84,8 @@
 			<div class="form-group row">
 				<label class="col-sm-2">배송 유형</label>
 				<div class="col-sm-3">
-					<input type="radio" id="deliveryType" name="deliveryType" value="rocket">로켓배송
-					<input type="radio" id="deliveryType" name="deliveryType" value="basic">일반배송
+					<input type="radio" id="deliveryType" name="deliveryType" value="로켓배송">로켓배송
+					<input type="radio" id="deliveryType" name="deliveryType" value="일반배송">일반배송
 				</div>
 			</div>
 			<div class="form-group row">

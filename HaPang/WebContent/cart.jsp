@@ -60,7 +60,7 @@ int total = product.getUnitPrice() * product.getQuantity();
 sum += total;
 %>
 <tr>
-<td><%=product.getProductId()%> - <%=product.getPname() %></td>
+<td>[<%=product.getProductId()%>] <%=product.getPname() %></td>
 <td><%=product.getUnitPrice() %></td>
 <td><%=product.getQuantity() %></td>
 <td><%=total %></td>

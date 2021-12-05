@@ -8,7 +8,6 @@
     String cartId = session.getId();
     String shipping_cartId = "";
     String shipping_name = "";
-    String shipping_shippingDate= "";
     String shipping_country = "";
     String shipping_zipCode = "";
     String shipping_addressName = "";
@@ -21,7 +20,6 @@
     		String n = thisCookie.getName();
     		if(n.equals("Shipping_cartId")) shipping_cartId=URLDecoder.decode((thisCookie.getValue()), "utf-8");
     		if(n.equals("Shipping_name")) shipping_name=URLDecoder.decode((thisCookie.getValue()), "utf-8");
-    		if(n.equals("Shipping_shippingDate")) shipping_shippingDate=URLDecoder.decode((thisCookie.getValue()), "utf-8");
     		if(n.equals("Shipping_country")) shipping_country=URLDecoder.decode((thisCookie.getValue()), "utf-8");
     		if(n.equals("Shipping_zipCode")) shipping_zipCode=URLDecoder.decode((thisCookie.getValue()), "utf-8");
     		if(n.equals("Shipping_addressName")) shipping_addressName=URLDecoder.decode((thisCookie.getValue()), "utf-8");
@@ -38,25 +36,18 @@
 </head>
 <body>
 	<jsp:include page="menu.jsp"/>
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3">주문정보</h1>
-		</div>
-	</div>
-	
-	<div class="container col-8 alert alert-info">
+	<hr width=80%>
+	<div style="height:40px"></div>
+	<div class="container col-8 alert alert-info" style="background: white">
 		<div class="text-center">
 			<h1>영수증</h1>
 		</div>
 		<div class="row justify-content-between">
 			<div class="col-4" align="left">
 				<strong>배송 주소</strong>
-				<br> 성명 : <%out.println(shipping_name);  %><br>
-				<br> 우편번호 : <%out.println(shipping_zipCode);  %><br>
-				<br> 주소 : <%out.println(shipping_addressName);  %>(<%out.println(shipping_country);  %>)<br>
-			</div>
-			<div class="col-4" align="right">
-				<p> <em>배송일 : <% out.println(shipping_shippingDate); %></em>
+				<br> 성   명 : <%out.println(shipping_name);  %><br>
+				<br> 고객번호 : <%out.println(shipping_name);  %><br>
+				<br> 주   소 : <%out.println(shipping_addressName);  %>(<%out.println(shipping_zipCode);%>)<br>
 			</div>
 		</div>
 		<div>

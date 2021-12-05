@@ -22,6 +22,11 @@
 			document.addForm.reset();
 		}
 	}
+	
+	function deleteConfirm(id){
+		if(confirm("해당 상품을 삭제합니다!") == true) location.href = "./deleteProduct.jsp?id="+id;
+		else return;
+	}
 </script>
 
 </head>
@@ -32,6 +37,7 @@
 	<%@ include file="dbconn.jsp" %>
 	<%
 		String productId = request.getParameter("id");
+		System.out.println(productId);
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String sql = "SELECT * FROM product where p_id = ?";
@@ -114,18 +120,10 @@
 			<!-- 버튼 -->
 				<p> <form name="addForm" action="./addCart.jsp?id=<%=rs.getString("p_id") %>" method="post">
 					<!-- <input type="hidden" name="productCount" value="6"> -->
-					<select name="amount" style="width: 90px; height: 39px;">
-						<%
-						int stock = Integer.parseInt(rs.getString("p_unitsInStock"));
-							for(int i=1;i<=stock;i++){
-						%>
-							<option value=<%=i %>><%=i %></option>
-						<%
-							}
-						%>
-					</select>
-					<a href="#" class="btn btn-info" onClick="addToCart()">상품주문&raquo;</a>
-					<a href="./cart.jsp" class="btn btn-warning">장바구니 &raquo;</a>
+				<p> <a href="./updateProduct.jsp?id=<%=rs.getString("p_id") %>"
+					class="btn btn-success" role="button" style="float:left;"> 상품 수정&raquo;</a>
+				<p> <a href="#" onClick="deleteConfirm('<%=rs.getString("p_id") %>')"
+					class="btn btn-secondary" role="button" style="float:left; margin-left:10px;"> 상품 삭제&raquo;</a>
 				</form> 
 			</div>	
 			<%
@@ -140,10 +138,3 @@
 	<%@ include file="footer.jsp" %>	
 </body>
 </html>
-
-
-
-
-
-
-

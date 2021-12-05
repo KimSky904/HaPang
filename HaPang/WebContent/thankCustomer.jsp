@@ -22,20 +22,14 @@
 			Cookie thisCookie = cookies[i];
 			String n = thisCookie.getName();
 			if(n.equals("Shipping_cartId")) shipping_cartId = URLDecoder.decode((thisCookie.getValue()),"utf-8");
-			if(n.equals("Shipping_shippingDate")) shipping_shippingDate = URLDecoder.decode((thisCookie.getValue()),"utf-8");
 		}
 	}
 %>
 	<jsp:include page="menu.jsp" />
-<div class="jumbotron">
-	<div class="container">
-		<h1 class = "display-3">주문완료</h1>
-	</div>
-</div>
-<div class="container">
-	<h2 class="alert alert-danger">주문해주셔서 감사합니다.</h2>
-	<p> 주문은 <% out.println(shipping_shippingDate); %>에 배송될 예정입니다.
-	<p> 주분번호 : <%out.println(shipping_cartId); %>
+	<hr width=80%>
+	<div style="height:40px"></div>
+<div>
+	<h2 style="margin-left: 220px; font-size: 20px;">주문해주셔서 감사합니다.</h2><br><br>
 </div>
 
 <div class="container">

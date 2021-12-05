@@ -10,40 +10,32 @@
 <body>
 
 	<jsp:include page="menu.jsp" />
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3">배송 정보</h1>
-		</div>
-	</div>
+	<div style="height:40px"></div>
 	
+	<p ><h3 style="margin-left: 210px; font-size:25px;">구매자정보</h3>
+	<hr width=80%>
 	<div class="container">
 		<form action="./processShippingInfo.jsp" class="form-horizontal" method="post">
 			<input type="hidden" name="cartId" value="<%=request.getParameter("cartId") %>"/>
-			<div class="from-group row">
+			<div class="from-group row" style="margin-bottom: 30px;">
 				<label class="col-sm-2">성명</label>
 				<div class="col-sm-3">
 					<input name="name" type="text" class="form-control"/>                                                                                                                                                                                                            
 				</div>
 			</div>
-			<div class="from-group row">
-				<label class="col-sm-2">배송일</label>
+			<div class="from-group row" style="margin-bottom: 30px;">
+				<label class="col-sm-2">전화번호</label>
 				<div class="col-sm-3">
-					<input name="shippingDate" type="text" class="form-control"/>(yyyy/mm/dd)                                                                                                                                                                                                            
+					<input name="phoneNumber" type="text" class="form-control"/>                                                                                                                                                                                                           
 				</div>
 			</div>
-			<div class="from-group row">
-				<label class="col-sm-2">국가</label>
-				<div class="col-sm-3">
-					<input name="country" type="text" class="form-control"/>                                                                                                                                                                                                           
-				</div>
-			</div>
-			<div class="from-group row">
+			<div class="from-group row" style="margin-bottom: 30px;">
 				<label class="col-sm-2">우편번호</label>
 				<div class="col-sm-3">
 					<input name="zipCode" type="text" class="form-control"/>                                                                                                                                                                                                        
 				</div>
 			</div>
-			<div class="from-group row">
+			<div class="from-group row" style="margin-bottom: 30px;">
 				<label class="col-sm-2">주소</label>
 				<div class="col-sm-5">
 					<input name="addressName" type="text" class="form-control"/>                                                                                                                                                                                                        

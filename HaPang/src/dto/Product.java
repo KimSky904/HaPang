@@ -9,13 +9,40 @@ public class Product implements Serializable   {
 	private String productId;		//��ǰ���̵�
 	private String pname;			//��ǰ��
 	private Integer unitPrice;		//��ǰ ����
+	private Integer saleRate;
+	private Integer sellPrice; //상품할인가
 	private String description;		//��ǰ ����
 	private String manufacturer;	//������
 	private String category;		//�з�
 	private long unitsInStock;		//����
 	private String condition;		//�Ż�ǰ or �߰�ǰ or ���ǰ
 	private String filename;
+	private String deliveryType; //배송유형
+	private Integer deliveryFee; //배송비
 	private int quantity; //w장바구니에 담은 개수
+	public Integer getSellPrice() {
+		return sellPrice;
+	}
+
+	public void setSellPrice(Integer sellPrice) {
+		this.sellPrice = sellPrice;
+	}
+
+	public String getDeliveryType() {
+		return deliveryType;
+	}
+
+	public void setDeliveryType(String deliveryType) {
+		this.deliveryType = deliveryType;
+	}
+
+	public Integer getDeliveryFee() {
+		return deliveryFee;
+	}
+
+	public void setDeliveryFee(Integer deliveryFee) {
+		this.deliveryFee = deliveryFee;
+	}
 	
 	public Product() {
 		super();
@@ -110,10 +137,14 @@ public class Product implements Serializable   {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
-	
-	
 
+	public Integer getSaleRate() {
+		return saleRate;
+	}
+
+	public void setSaleRate(Integer saleRate) {
+		this.saleRate = saleRate;
+	}
 }
 
 
