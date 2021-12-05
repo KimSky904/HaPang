@@ -42,7 +42,7 @@
 				<p style="font-size: 12px; display:inline;"> |</p>
 				<p style="font-size: 12px; display:inline; text-decoration:line-through"><%= rs.getInt("p_unitPrice")%>원</p>
 			<!-- 상품판매가 + 배송분류 -->
-				<p style="font-size: 12px; color: red; font-style: bold; "><%= rs.getString("p_discountedPrice")%>원
+				<p style="font-size: 12px; color: red; font-style: 10000; "><%= rs.getString("p_discountedPrice")%>원
 				<%
 					//현재 날짜정보
 					Calendar calendar = Calendar.getInstance();
