@@ -53,14 +53,19 @@
 		stock = Long.valueOf(unitsInStock);
 	
 	//배송비 
-	if(deliveryType.equals("로켓배송")){
-		additionalFee = 0;
-	} else {
-		if(deliveryFee.isEmpty())
+	if(deliveryType!=null){
+		if(deliveryType.equals("로켓배송")){
 			additionalFee = 0;
-		else
-			additionalFee = Long.valueOf(deliveryFee);
+		} else {
+			if(deliveryFee.isEmpty())
+				additionalFee = 0;
+			else
+				additionalFee = Long.valueOf(deliveryFee);
+		}
+	} else {
+		additionalFee = 0;
 	}
+	
 
 	
 	

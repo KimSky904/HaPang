@@ -42,7 +42,7 @@
 				<p style="font-size: 12px; display:inline;"> |</p>
 				<p style="font-size: 12px; display:inline; text-decoration:line-through;"><%= rs.getInt("p_unitPrice")%>원</p>
 			<!-- 상품판매가 + 배송분류 -->
-				<p style="font-size: 12px; color: red; font-style: 10000; font-weight: bold; color: #9F1F14"><%= rs.getString("p_discountedPrice")%>원
+				<p style="font-size: 16px; color: red; font-style: 10000; font-weight: bold; color: #9F1F14"><%= rs.getString("p_discountedPrice")%>원
 				<%
 					//현재 날짜정보
 					Calendar calendar = Calendar.getInstance();
@@ -52,16 +52,21 @@
 					int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
 					String arriveInfo="";
 					//로켓배송인지 확인 (1일 후 도착)
-					if(rs.getString("p_deliveryType").equals("로켓배송")){
-						dayOfWeek++;
+					String deliveryType = rs.getString("p_deliveryType");
+					if(deliveryType==null) deliveryType="일반배송";
+					if(deliveryType.equals("로켓배송")){
 						arriveInfo+="내일";
+						dayOfMonth++;
+						month++;
 				%>
 					<img src="C:/upload/rocketDelivery.png" alt="logo" style="width:20%">
 				<%
 					}
 					//일반배송 (2일 후 도착)
 					else {
-						dayOfWeek+=2;
+						dayOfWeek++;
+						dayOfMonth+=2;
+						month++;
 					}
 					
 					switch(dayOfWeek){
